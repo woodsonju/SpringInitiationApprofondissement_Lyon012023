@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import fr.dawan.tpioc.dao.IDao;
 
+
 public class MetierImpl implements IMetier{
 
 	//Interface ==> Couplage faible
