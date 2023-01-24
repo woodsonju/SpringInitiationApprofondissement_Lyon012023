@@ -3,6 +3,7 @@ package fr.dawan.springmvc.beans;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -40,7 +41,7 @@ public class User implements Serializable{
 	
 	private String password;
 	
-	@Enumerated
+	@Enumerated(EnumType.STRING)
 	private Role role =Role.USER;
 	
 	public User() {
@@ -92,6 +93,16 @@ public class User implements Serializable{
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
 	}
 
 	public int getVersion() {
